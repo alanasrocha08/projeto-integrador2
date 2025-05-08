@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
- 
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,21 +14,21 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet" />
- 
+
     <link rel="shortcut icon" href="assets/jm_black.svg" type="image/x-icon" />
 
     <link rel="stylesheet" href="global.css">
 
 </head>
- 
+
 <body>
     <!-- Inicio do header -->
-    <header class="topo">
-        <div class="limitador">
-            <h1 class="titulo">
+    <header>
+        <div class="menu">
+            <h1>
                 <a href="index.php">CAFETERIA<span></span></a>
             </h1>
-            <nav class="menu">
+            <nav>
                 <ul class="links-menu">
                     <li><a href="index.php">Home</a></li>
                     <li><a href="./pages/servicos.php">Serviços</a></li>
@@ -41,30 +41,39 @@
 
     <main>
         <!-- Começo do site (main) -->
-        <article class="hero">
-        <img src="assets/foto-destaque.jpg" class="img-hero"/>
-            <div class="conteudo-hero">
+        <div class="hero">
+            <article class="conteudo-principal-hero">
                 <h2>Bem vindo(a)!</h2>
                 <p>Nós somos a nova cafeteria sem gluten</p>
-            </div>
-        </article>
+            </article>
+        </div>
 
         <!-- Sobre nós -->
         <article>
             <h2>Sobre nós</h2>
-            <p>Somos uma cafeteria pensada especialmente para quem busca qualidade, sabor e segurança alimentar. Localizados no coração da Vila Mariana, um dos bairros mais charmosos e tradicionais de São Paulo, oferecemos um ambiente acolhedor onde todos podem saborear cafés especiais, doces e quitutes sem preocupação.</p>
+            <p>Somos uma cafeteria pensada especialmente para quem busca qualidade, sabor e segurança alimentar.
+                Localizados no coração da Vila Mariana, um dos bairros mais charmosos e tradicionais de São Paulo,
+                oferecemos um ambiente acolhedor onde todos podem saborear cafés especiais, doces e quitutes sem
+                preocupação.</p>
 
-            <p>Aqui, todo o nosso cardápio é 100% livre de glúten, garantindo tranquilidade para celíacos e para quem deseja uma alimentação mais saudável. Selecionamos ingredientes frescos e de procedência, e nossa cozinha é dedicada exclusivamente à produção sem contaminação cruzada, para que cada cliente possa aproveitar sua experiência com total confiança.</p>
+            <p>Aqui, todo o nosso cardápio é 100% livre de glúten, garantindo tranquilidade para celíacos e para quem
+                deseja uma alimentação mais saudável. Selecionamos ingredientes frescos e de procedência, e nossa
+                cozinha é dedicada exclusivamente à produção sem contaminação cruzada, para que cada cliente possa
+                aproveitar sua experiência com total confiança.</p>
 
-            <p>Mais do que uma cafeteria, somos um espaço de encontro para amigos, famílias e apaixonados por café, onde a inclusão e o bem-estar vêm sempre em primeiro lugar. Venha nos visitar na Vila Mariana e descubra um novo jeito de apreciar o melhor do café e da confeitaria sem glúten em São Paulo!</p>
+            <p>Mais do que uma cafeteria, somos um espaço de encontro para amigos, famílias e apaixonados por café, onde
+                a inclusão e o bem-estar vêm sempre em primeiro lugar. Venha nos visitar na Vila Mariana e descubra um
+                novo jeito de apreciar o melhor do café e da confeitaria sem glúten em São Paulo!</p>
         </article>
 
         <!-- Carrossel de compras -->
         <article>
-            <h2>Mais pedidos</h2>
-            <h3>Nome do produto</h3>
-            <h3>Nome do produto</h3>
-            <h3>Nome do produto</h3>
+            <div>
+                <h2>Mais pedidos</h2>
+                <h3>Bebida de Hibisco e leite</h3>
+                <h3>Cookies</h3>
+                <h3>Quiche Verônica</h3>
+            </div>
         </article>
 
         <!-- Cards do Cardápio  -->
@@ -78,5 +87,5 @@
                 </div>
             </section>
         </div>
-    
-<?php include "./includes/rodape.php"?>
+
+        <?php include "./includes/rodape.php"?>

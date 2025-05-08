@@ -1,4 +1,20 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+header {
+  background-color: #465940;
+  height: 10vh;
+  position: sticky;
+  top: 0;
+}
+
+.limitador {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }

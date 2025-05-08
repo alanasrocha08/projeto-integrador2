@@ -2,7 +2,7 @@
 <footer>
         <div>
             <h2>UNIDADE Vila Mariana</h2>
-            <p>Rua nao sei o que lá, 666</p>
+            <p>R. Humberto I, 747 - Vila Mariana, São Paulo</p>
         </div>
         <div>
             <p>HORÁRIOS:</p>
@@ -15,7 +15,7 @@
         </div>
         <div>
             <p>WhatsApp</p>
-            <p>(11)66666-6666</p>
+            <p>(11)96458-4159</p>
  
             <p>E-mail:</p>
             <p>emailficticio@gmail.com</p>
