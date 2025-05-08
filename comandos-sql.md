@@ -34,7 +34,7 @@ CREATE TABLE usuario (
     nome VARCHAR(150) NOT NULL,
     email MEDIUMTEXT NOT NULL,
     senha VARCHAR(45) NOT NULL,
-    data_de_cadastro DATETIME NOT NULL
+    data_de_cadastro DATE NOT NULL
 );
 ```
  
@@ -104,7 +104,7 @@ INSERT INTO produtos (nome, descricao, preco, categoria_id) VALUES
     'Coca-Cola',
     'Refrigerante de lata - 350ml',
     10.50,
-    3
+    3 
     ),
  
     (  
@@ -136,29 +136,29 @@ INSERT INTO produtos (nome, descricao, preco, categoria_id) VALUES
     ),
  
     (
-    'Pizza de queijo de bufala com tomate cereja'
+    'Pizza de queijo de bufala com tomate cereja',
     'Pizza de biomassa com queijo de bufala fresco, tomate cereja e um molho de tomata da casa.',
     12.99,
     1
     ),
  
     (
-    'Torta de Limão Siciliano'  
-    'Torta de limão com base de amêndoas e avelãs e com um creme de limão siciliano'
+    'Torta de Limão Siciliano',
+    'Torta de limão com base de amêndoas e avelãs e com um creme de limão siciliano',
     16.30,
     2
     ),
  
     (
-    'Cookies de chocolate'
-    'Cookies de chocolate com gotas de chocolate'
+    'Cookies de chocolate',
+    'Cookies de chocolate com gotas de chocolate',
     9.99,
     2
     ),
  
     (
-    'Profiteroles'
-    'Pofiteroles de cereja'
+    'Profiteroles',
+    'Pofiteroles de cereja',
     6.90,
     2    
     );
