@@ -59,6 +59,7 @@ switch ($caminho) {
                     <li><a href="../index.php">Home</a></li>
                     <li><a href="servicos.php">Serviços</a></li>
                     <li><a href="contato.php">Contato</a></li>
+                    <li><a href="../pages/cadastro.php">Cadastro</a></li>
                 </ul>
             </nav>
         </div>
