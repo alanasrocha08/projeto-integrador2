@@ -20,8 +20,8 @@
   </section>
  
   <!-- Seção Bebidas Geladas -->
-  <section class="bebidas-geladas">
-    <h3>BEBIDAS GELADAS</h3>
+  <section class="bebidas">
+    <h3>BEBIDAS</h3>
     <div class="carrossel">
         <div>
           <p>"Neque porro quisquam est qui dolorem ipsum..."</p>
