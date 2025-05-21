@@ -54,8 +54,8 @@ switch ($caminho) {
   <header>
     <div class="limitador">
       <div class="header">
-        <h1 class="titulo"><a href="index.php"></a>Cafeteria</h1>
-        <nav>
+        <h1 class="titulo"><a href="index.php"></a>Cooffee <img src="../assets/icons/logo_cooffee.svg" alt=""></h1>
+        <nav> 
           <button
             type="button"
             class="btn-menu"

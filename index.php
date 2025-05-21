@@ -381,5 +381,6 @@ switch ($caminho) {
       </div>
     </div>
   </main>
-
+<script type="module" src="js/main.js"></script>
+    <script src="js/carrosel.js"></script>
   <?php include "includes/rodape.php" ?>
