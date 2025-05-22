@@ -36,9 +36,13 @@ final class Usuario
     {
         return $this->senha;
     }
-    public function getddatadecadastro(): string 
+    public function getdatadecadastro(): string 
     {
         return $this->datadecadastro;
+    }
+    public function getId(): int
+    {
+        return $this->id;
     }
 
     private function setNome(string $nome): void
