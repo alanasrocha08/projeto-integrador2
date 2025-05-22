@@ -20,8 +20,8 @@
   </section>
  
   <!-- Seção Bebidas Geladas -->
-  <section class="bebidas-geladas">
-    <h3>BEBIDAS GELADAS</h3>
+  <section class="bebidas">
+    <h3>BEBIDAS</h3>
     <div class="carrossel">
         <div>
           <p>"Neque porro quisquam est qui dolorem ipsum..."</p>
@@ -47,6 +47,10 @@
      
     </div>
   </section>
+  <script type="module" src="js/main.js"></script>
+    <script src="js/carrosel.js"></script>
+    <script src="./js/menu.js"></script>
+    <script src="./js/shopCart.js"></script>
  
   <?php include "../includes/rodape.php"; ?>
     

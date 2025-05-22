@@ -1,35 +1,57 @@
+    <footer>
+      <div class="limitador">
+        <div class="footer">
+          <div class="info">
+            <div class="endereco">
+              <div class="endereco-info">
+                <h2>Unidade Vila Mariana</h2>
+                <p>Rua não sei o lá, 123</p>
+              </div>
+              <div class="horarios">
+                <h2>Horários</h2>
+                <ul class="lista-horarios">
+                  <li>
+                    <p>08:00 às 22:00</p>
+                    <p><strong>Segunda a Sexta</strong></p>
+                  </li>
 
-<footer>
-        <div>
-            <h2>UNIDADE Vila Mariana</h2>
-            <p>Rua nao sei o que lá, 666</p>
+                  <li>
+                    <p>10:00 às 22:00</p>
+                    <p><strong>Sábados</strong></p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="img-info">
+              <img
+                src="../assets/images/pic_coffee.png"
+                alt="Interior da cafeteria com decoração aconchegante"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="contato">
+              <div class="whatsapp-info">
+                <h2>WhatsApp</h2>
+                <p><a href="tel:+5511981075141">(11) 98107-5141</a></p>
+              </div>
+              <div class="email-info">
+                <h2>E-mail</h2>
+                <p>
+                  <a href="mailto:teste@teste.com">teste@teste.com</a>
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div>
-            <p>HORÁRIOS:</p>
- 
-            <p>Terça à Sexta</p>
-            <p>08:00 às 22:00</p>
- 
-            <p>Sábado e Domingo</p>
-            <p>08:00 às 00:00</p>
-        </div>
-        <div>
-            <p>WhatsApp</p>
-            <p>(11)66666-6666</p>
- 
-            <p>E-mail:</p>
-            <p>emailficticio@gmail.com</p>
-        </div>
-        <div></div>
+      </div>
     </footer>
-    <!-- Final rodapé -->
-</main>
- 
- 
- 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
-</body>
- 
+     <script src="../js/menu.js"></script>
+ <script type="module" src="../js/main.js"></script>
+    <script src="../js/carrossel.js"></script>
+    <script src="../js/shopCart.js"></script>
+    <script src="../js/formRegister.js"></script>
+    <script src="../js/togglePassword.js"></script>
+  </body>
 </html>
