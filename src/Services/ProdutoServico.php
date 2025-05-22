@@ -23,7 +23,7 @@ final class ProdutoServico
 
         try {
             $consulta = $this->conexao->prepare($sql);
-            consulta->execute();
+            $consulta->execute();
 
             return $consulta->fetchAll(PDO::FETCH_ASSOC);
         } catch (Throwable $erro) {
