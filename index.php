@@ -18,9 +18,6 @@ switch ($caminho) {
     $titulo = "Contato";
     break;
 
-  case "servicos.php":
-    $titulo = "Servicos";
-    break;
   default:
     $titulo = "";
     break;
@@ -54,7 +51,8 @@ switch ($caminho) {
   <header>
     <div class="limitador">
       <div class="header">
-        <h1 class="titulo"><a href="index.php"></a>Cafeteria</h1>
+                <h1 class="titulo"><a href="index.php"> Cooffee <img class="logo" src="assets/icons/logo_cooffee.svg" alt=""></a></h1>
+
         <nav>
           <button
             type="button"
@@ -67,12 +65,14 @@ switch ($caminho) {
               <a href="./index.php"><i class="fi fi-rr-home"></i>Home</a>
             </li>
             <li>
-              <a href="#"><i class="fi fi-rr-envelope-open"></i>Contato</a>
+              <a href="./pages/contato.php"><i class="fi fi-rr-envelope-open"></i>Contato</a>
             </li>
             <a href="./pages/login.php"><i class="fi fi-rr-user"></i>Login </a>
             </li>
+               <li><a href="./pages/cadastro.php"><i class="fi fi-rr-user"></i>Cadastre-se</a></li>
+              <li>
           </ul>
-          <a href="" class="cart"><i class="fi fi-rr-shopping-cart"></i></a>
+          <a href="./pages/carrinho.php" class="cart"><i class="fi fi-rr-shopping-cart"></i></a>
         </nav>
       </div>
     </div>
@@ -84,62 +84,6 @@ switch ($caminho) {
         <section class="conteudo">
           <h2>Bem vindo(a)!</h2>
           <p>Nós somos a nova cafeteria sem glúten</p>
-        </section>
-      </div>
-    </div>
-
-    <!-- Sobre nós -->
-    <div class="limitador">
-      <div class="section-sobre" id="sobre">
-        <section class="sobre">
-          <h2>Sobre nós</h2>
-          <div class="sobre-container">
-            <div class="sobre-img">
-              <img
-                src="./assets/images/foto-destaque.jpg"
-                alt="Xícara de café"
-                loading="lazy" />
-            </div>
-            <div class="sobre-conteudo">
-              <p>
-                Somos uma <strong>cafeteria</strong> pensada especialmente
-                para quem busca <strong>qualidade</strong>,
-                <strong>sabor</strong> e <strong>segurança alimentar</strong>.
-                Localizados no coração da <strong>Vila Mariana</strong>, um
-                dos bairros mais charmosos e tradicionais de
-                <strong>São Paulo</strong>, oferecemos um
-                <strong>ambiente acolhedor</strong> onde todos podem saborear
-                <strong>cafés especiais</strong>, <strong>doces</strong> e
-                <strong>quitutes</strong> sem preocupação.
-              </p>
-
-              <p>
-                Aqui, todo o nosso cardápio é
-                <strong>100% livre de glúten</strong>, garantindo
-                tranquilidade para <strong>celíacos</strong> e para quem
-                deseja uma <strong>alimentação mais saudável</strong>.
-                Selecionamos <strong>ingredientes frescos</strong> e de
-                <strong>procedência</strong>, e nossa cozinha é dedicada
-                exclusivamente à produção
-                <strong>sem contaminação cruzada</strong>, para que cada
-                cliente possa aproveitar sua experiência com
-                <strong>total confiança</strong>.
-              </p>
-
-              <p>
-                Mais do que uma cafeteria, somos um
-                <strong>espaço de encontro</strong> para
-                <strong>amigos</strong>, <strong>famílias</strong> e
-                <strong>apaixonados por café</strong>, onde a
-                <strong>inclusão</strong> e o <strong>bem-estar</strong> vêm
-                sempre em primeiro lugar. Venha nos visitar na
-                <strong>Vila Mariana</strong> e descubra um novo jeito de
-                apreciar o <strong>melhor do café</strong> e da
-                <strong>confeitaria sem glúten</strong> em
-                <strong>São Paulo</strong>!
-              </p>
-            </div>
-          </div>
         </section>
       </div>
     </div>
@@ -159,11 +103,11 @@ switch ($caminho) {
             <div class="container-card">
               <div class="card-produto">
                 <img
-                  src="assets/images/foto-destaque.jpg"
+                  src="assets/images/cookie-chocolate.jpg"
                   alt=""
                   width="358px"
                   height="396px" />
-                <h3>Nome do produto</h3>
+                <h3>Cookie de chocolate</h3>
                 <div class="button-container">
                   <button class="remove" aria-label="Botão de remover">
                     <i class="fi fi-rr-minus"></i>
@@ -178,11 +122,11 @@ switch ($caminho) {
               </div>
               <div class="card-produto">
                 <img
-                  src="assets/images/foto-destaque.jpg"
+                  src="assets/images/quiche-lorraine.jpg"
                   alt=""
                   width="358px"
                   height="396px" />
-                <h3>Nome do produto</h3>
+                <h3>Quiche lorraine</h3>
                 <div class="button-container">
                   <button class="remove" aria-label="Botão de remover">
                     <i class="fi fi-rr-minus"></i>
@@ -197,11 +141,11 @@ switch ($caminho) {
               </div>
               <div class="card-produto">
                 <img
-                  src="assets/images/foto-destaque.jpg"
+                  src="assets/images/tota-de-limao-siciliano.jpg"
                   alt=""
                   width="358px"
                   height="396px" />
-                <h3>Nome do produto</h3>
+                <h3>Torta Cecília</h3>
                 <div class="button-container">
                   <button class="remove" aria-label="Botão de remover">
                     <i class="fi fi-rr-minus"></i>
@@ -353,7 +297,7 @@ switch ($caminho) {
           </div>
 
           <div class="card-cardapio-container">
-            <a href="" class="card-link">
+            <a href="./pages/bebidas.php" class="card-link">
               <h3>Bebidas</h3>
               <img
                 src="assets/icons/drink.png"
@@ -361,7 +305,7 @@ switch ($caminho) {
                 loading="lazy" />
             </a>
 
-            <a href="" class="card-link">
+            <a href="./pages/salgados.php" class="card-link">
               <h3>Salgados</h3>
               <img
                 src="assets/icons/food.png"
@@ -369,7 +313,7 @@ switch ($caminho) {
                 loading="lazy" />
             </a>
 
-            <a href="" class="card-link">
+            <a href="./pages/doces.php" class="card-link">
               <h3>Doces</h3>
               <img
                 src="assets/icons/confectionery.png"
@@ -380,7 +324,119 @@ switch ($caminho) {
         </section>
       </div>
     </div>
+
+    <!-- Sobre nós -->
+    <div class="limitador">
+      <div class="section-sobre" id="sobre">
+        <section class="sobre">
+          <h2>Sobre nós</h2>
+          <div class="sobre-container">
+            <div class="sobre-img">
+              <img
+                src="./assets/images/sobre-nos.jpg"
+                alt="Xícara de café"
+                loading="lazy" />
+            </div>
+            <div class="sobre-conteudo">
+              <p>
+                Somos uma <strong>cafeteria</strong> pensada especialmente
+                para quem busca <strong>qualidade</strong>,
+                <strong>sabor</strong> e <strong>segurança alimentar</strong>.
+                Localizados no coração da <strong>Vila Mariana</strong>, um
+                dos bairros mais charmosos e tradicionais de
+                <strong>São Paulo</strong>, oferecemos um
+                <strong>ambiente acolhedor</strong> onde todos podem saborear
+                <strong>cafés especiais</strong>, <strong>doces</strong> e
+                <strong>quitutes</strong> sem preocupação.
+              </p>
+
+              <p>
+                Aqui, todo o nosso cardápio é
+                <strong>100% livre de glúten</strong>, garantindo
+                tranquilidade para <strong>celíacos</strong> e para quem
+                deseja uma <strong>alimentação mais saudável</strong>.
+                Selecionamos <strong>ingredientes frescos</strong> e de
+                <strong>procedência</strong>, e nossa cozinha é dedicada
+                exclusivamente à produção
+                <strong>sem contaminação cruzada</strong>, para que cada
+                cliente possa aproveitar sua experiência com
+                <strong>total confiança</strong>.
+              </p>
+
+              <p>
+                Mais do que uma cafeteria, somos um
+                <strong>espaço de encontro</strong> para
+                <strong>amigos</strong>, <strong>famílias</strong> e
+                <strong>apaixonados por café</strong>, onde a
+                <strong>inclusão</strong> e o <strong>bem-estar</strong> vêm
+                sempre em primeiro lugar. Venha nos visitar na
+                <strong>Vila Mariana</strong> e descubra um novo jeito de
+                apreciar o <strong>melhor do café</strong> e da
+                <strong>confeitaria sem glúten</strong> em
+                <strong>São Paulo</strong>!
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
   </main>
-<script type="module" src="js/main.js"></script>
-    <script src="js/carrosel.js"></script>
-  <?php include "includes/rodape.php" ?>
+       <footer>
+      <div class="limitador">
+        <div class="footer">
+          <div class="info">
+            <div class="endereco">
+              <div class="endereco-info">
+                <h2>Unidade Vila Mariana</h2>
+                <p>Rua não sei o lá, 123</p>
+              </div>
+              <div class="horarios">
+                <h2>Horários</h2>
+                <ul class="lista-horarios">
+                  <li>
+                    <p>08:00 às 22:00</p>
+                    <p><strong>Segunda a Sexta</strong></p>
+                  </li>
+
+                  <li>
+                    <p>10:00 às 22:00</p>
+                    <p><strong>Sábados</strong></p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="img-info">
+              <img
+                src="./assets/images/pic_coffee.png"
+                alt="Interior da cafeteria com decoração aconchegante"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="contato">
+              <div class="whatsapp-info">
+                <h2>WhatsApp</h2>
+                <p><a href="tel:+5511981075141">(11) 98107-5141</a></p>
+              </div>
+              <div class="email-info">
+                <h2>E-mail</h2>
+                <p>
+                  <a href="mailto:teste@teste.com">teste@teste.com</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+     <script src="../js/menu.js"></script>
+ <script type="module" src="../js/main.js"></script>
+    <script src="../js/carrossel.js"></script>
+    <script src="../js/shopCart.js"></script>
+    <script src="../js/formRegister.js"></script>
+    <script src="../js/togglePassword.js"></script>
+  </body>
+</html>
+  </body>

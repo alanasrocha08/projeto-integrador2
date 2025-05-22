@@ -18,9 +18,6 @@ switch ($caminho) {
     $titulo = "Contato";
     break;
 
-  case "servicos.php":
-    $titulo = "Servicos";
-    break;
   default:
     $titulo = "";
     break;
@@ -47,14 +44,14 @@ switch ($caminho) {
     rel="stylesheet"
     href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css" />
 
-  <link rel="shortcut icon" href="assets/jm_black.svg" type="image/x-icon" />
+  <link rel="shortcut icon" href="../assets/jm_black.svg" type="image/x-icon" />
 </head>
 
 <body>
   <header>
     <div class="limitador">
       <div class="header">
-        <h1 class="titulo"><a href="index.php"></a>Cooffee <img src="../assets/icons/logo_cooffee.svg" alt=""></h1>
+        <h1 class="titulo"><a href="../index.php"> Cooffee <img src="../assets/icons/logo_cooffee.svg" alt=""></a></h1>
         <nav> 
           <button
             type="button"
@@ -64,16 +61,19 @@ switch ($caminho) {
           </button>
           <ul class="links-menu">
             <li>
-              <a href="./index.php"><i class="fi fi-rr-home"></i>Home</a>
+              <a href="../index.php"><i class="fi fi-rr-home"></i>Home</a>
             </li>
             <li>
-              <a href="#"><i class="fi fi-rr-envelope-open"></i>Contato</a>
+              <a href="../pages/contato.php"><i class="fi fi-rr-envelope-open"></i>Contato</a>
             </li>
-            <a href="./pages/login.php"><i class="fi fi-rr-user"></i>Login </a>
+            <a href="../pages/login.php"><i class="fi fi-rr-user"></i>Login </a>
             </li>
+               <li><a href="../pages/cadastro.php"><i class="fi fi-rr-user"></i>Cadastre-se</a></li>
           </ul>
-          <a href="" class="cart"><i class="fi fi-rr-shopping-cart"></i></a>
+          <a href="../pages/carrinho.php" class="cart"><i class="fi fi-rr-shopping-cart"></i></a>
         </nav>
       </div>
     </div>
   </header>
+
+ <body>

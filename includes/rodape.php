@@ -25,7 +25,7 @@
 
             <div class="img-info">
               <img
-                src="assets/images/pic_coffee.png"
+                src="../assets/images/pic_coffee.png"
                 alt="Interior da cafeteria com decoração aconchegante"
                 loading="lazy"
               />
@@ -47,7 +47,11 @@
         </div>
       </div>
     </footer>
-    <script type="module" src="js/main.js"></script>
+     <script src="../js/menu.js"></script>
+ <script type="module" src="../js/main.js"></script>
     <script src="../js/carrossel.js"></script>
+    <script src="../js/shopCart.js"></script>
+    <script src="../js/formRegister.js"></script>
+    <script src="../js/togglePassword.js"></script>
   </body>
 </html>
