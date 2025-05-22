@@ -20,7 +20,7 @@ final class ControleDeAcesso {
         // Se NÃO EXISTIR uma variável de sessão chamada ID
         if(!isset($_SESSION['id'])){
             session_destroy();
-            header("location:../login.php?acesso_proibido");
+            header("");
             exit;
         }
     }
@@ -39,7 +39,7 @@ final class ControleDeAcesso {
     {
         self::iniciarSessao();
         session_destroy();
-        header("location:../login.php?logout");
+        header("");
         exit;
     }
 
@@ -47,7 +47,7 @@ final class ControleDeAcesso {
     {
         self::iniciarSessao();
         if($_SESSION['tipo'] !== 'admin') {
-        header("location:nao-autorizado.php");
+        header("");
         exit;
 
         }
