@@ -32,6 +32,7 @@ switch ($caminho) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title><?= $titulo ?></title>
 
+
   <link rel="stylesheet" href="./css/global.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -404,6 +405,7 @@ switch ($caminho) {
                     <p><strong>Sábados</strong></p>
                   </li>
                 </ul>
+
               </div>
             </div>
 
@@ -440,3 +442,4 @@ switch ($caminho) {
   </body>
 </html>
   </body>
+
