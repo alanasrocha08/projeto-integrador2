@@ -14,8 +14,8 @@ switch ($caminho) {
     $titulo = "Cardápio";
     break;
 
-  case "contato.php":
-    $titulo = "Contato";
+  case "login.php":
+    $titulo = "Login";
     break;
 
   default:
@@ -64,7 +64,7 @@ switch ($caminho) {
               <a href="../index.php"><i class="fi fi-rr-home"></i>Home</a>
             </li>
             <li>
-              <a href="../pages/contato.php"><i class="fi fi-rr-envelope-open"></i>Contato</a>
+              <a href="../pages/cardapio.php"><i class="fi fi-rr-restaurant"></i>Cardápio</a>
             </li>
             <a href="../pages/login.php"><i class="fi fi-rr-user"></i>Login </a>
             </li>
