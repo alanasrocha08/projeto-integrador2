@@ -19,7 +19,7 @@
               </div>
               <form
                 id="my-form"
-                action="https://formspree.io/f/mqakebnj"
+                action=""
                 method="post"
               >
                 <div class="form">

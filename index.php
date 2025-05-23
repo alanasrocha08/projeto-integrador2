@@ -143,7 +143,7 @@ switch ($caminho) {
               
               <div class="card-produto">
                 <img
-                  src="assets/images/tota-de-limao-siciliano.jpg"
+                  src="assets/images/torta-de-limao-siciliano.jpg"
                   alt=""
                   width="358px"
                   height="396px" />
@@ -299,7 +299,7 @@ switch ($caminho) {
           </div>
 
           <div class="card-cardapio-container">
-            <a href="./pages/bebidas.php" class="card-link">
+            <a href="./pages/cardapio.php" class="card-link" id="cardapio.php#bebidas">
               <h3>Bebidas</h3>
               <img
                 src="assets/icons/drink.png"
@@ -307,7 +307,7 @@ switch ($caminho) {
                 loading="lazy" />
             </a>
 
-            <a href="./pages/salgados.php" class="card-link">
+            <a href="./pages/cardapio.php" class="card-link" id="carapio.php#salgados"> 
               <h3>Salgados</h3>
               <img
                 src="assets/icons/food.png"
@@ -315,7 +315,7 @@ switch ($caminho) {
                 loading="lazy" />
             </a>
 
-            <a href="./pages/doces.php" class="card-link">
+            <a href="./pages/cardapio.php" class="card-link" id="cardapio.php#doces">
               <h3>Doces</h3>
               <img
                 src="assets/icons/confectionery.png"

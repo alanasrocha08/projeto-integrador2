@@ -8,21 +8,21 @@
         <h2>Cardápio</h2>
       </div>
       <div class="card-cardapio-container">
-        <a href="#" class="card-link" aria-label="Ver bebidas">
+        <a href="cardapio.php#bebidas" class="card-link" aria-label="Ver bebidas">
           <h3>Bebidas</h3>
           <img
             src="../assets/icons/drink.png"
             alt="Ícone de bebidas"
             loading="lazy" />
         </a>
-        <a href="#" class="card-link" aria-label="Ver salgados">
+        <a href="cardapio.php#salgados" class="card-link" aria-label="Ver salgados">
           <h3>Salgados</h3>
           <img
             src="../assets/icons/food.png"
             alt="Ícone de salgados"
             loading="lazy" />
         </a>
-        <a href="#" class="card-link" aria-label="Ver doces">
+        <a href="cardapio.php#doces" class="card-link" aria-label="Ver doces">
           <h3>Doces</h3>
           <img
             src="../assets/icons/confectionery.png"
@@ -35,10 +35,11 @@
 </div>
 
 <!-- Carrossel de Bebidas Quentes -->
-<div class="container-carossel-de-compras" id="carrosel-bebidas-quentes">
+<div class="container-carossel-de-compras" id="bebidas">
   <div class="limitador">
     <section class="carrosel-de-compras">
       <h2>Bebidas</h2>
+      <div id="bebidas quentes"> 
       <h3>Bebidas quentes</h3>
       <div class="container-card-slider">
         <button
@@ -77,7 +78,7 @@
           <div class="card-produto">
             <img
               src="../assets/images/chocolate-quente.jpg"
-              alt="Café expresso"
+              alt="Chocolate quente"
               width="358"
               height="396" />
             <h3>Chocolate quente</h3>
@@ -121,9 +122,10 @@
     </section>
   </div>
 </div>
+</div>
 
 <!-- Carrossel de Bebidas Geladas -->
-<div class="container-carossel-de-compras" id="carrosel-bebidas-geladas">
+<div class="container-carossel-de-compras" id="bebidas geladas">
   <div class="limitador">
     <section class="carrosel-de-compras">
       <h3>Bebidas geladas</h3>
@@ -210,7 +212,7 @@
 </div>
 
 <!-- Carrossel de Doces -->
-<div class="container-carossel-de-compras" id="carrosel-doces">
+<div class="container-carossel-de-compras" id="doces">
   <div class="limitador">
     <section class="carrosel-de-compras">
       <h2>Doces</h2>
@@ -257,6 +259,23 @@
             </div>
           </div>
           <!-- Adicione outros produtos relevantes aqui -->
+<div class="card-produto">
+            <img
+              src="../assets/images/carolina.jpg"
+              alt="Carolina"
+              width="358"
+              height="396" />
+            <h3>Carolina sem glúten</h3>
+            <div class="button-container">
+              <button class="remove" aria-label="Remover Carolina sem glúten">
+                <i class="fi fi-rr-minus"></i>
+              </button>
+              <p>Comprar</p>
+              <button class="add" aria-label="Adicionar Carolina sem glúten">
+                <i class="fi fi-rr-add"></i>
+              </button>
+            </div>
+          </div>  
 
         </div>
       </div>
@@ -265,7 +284,7 @@
 </div>
 
 <!-- Carrossel de Salgados -->
-<div class="container-carossel-de-compras" id="carrosel-salgados">
+<div class="container-carossel-de-compras" id="salgados">
   <div class="limitador">
     <section class="carrosel-de-compras">
       <h2>Salgados</h2>
@@ -279,51 +298,51 @@
         <div class="container-card">
           <div class="card-produto">
             <img
-              src="assets/images/coxinha.jpg"
-              alt="Coxinha"
+              src="../assets/images/quiche-lorraine.jpg"
+              alt="Quin=ceh Lorraine"
               width="358"
               height="396" />
-            <h3>Coxinha</h3>
+            <h3>Quiche Lorraine</h3>
             <div class="button-container">
-              <button class="remove" aria-label="Remover coxinha">
+              <button class="remove" aria-label="Remover Quiche Lorraine">
                 <i class="fi fi-rr-minus"></i>
               </button>
               <p>Comprar</p>
-              <button class="add" aria-label="Adicionar coxinha">
+              <button class="add" aria-label="Adicionar Quiche Lorraine">
                 <i class="fi fi-rr-add"></i>
               </button>
             </div>
           </div>
           <div class="card-produto">
             <img
-              src="assets/images/pastel.jpg"
-              alt="Pastel"
+              src="../assets/images/empada.jpg"
+              alt="Empada de palmito"
               width="358"
               height="396" />
-            <h3>Pastel</h3>
+            <h3>Empada de palmito</h3>
             <div class="button-container">
-              <button class="remove" aria-label="Remover pastel">
+              <button class="remove" aria-label="Remover Empada de palmito">
                 <i class="fi fi-rr-minus"></i>
               </button>
               <p>Comprar</p>
-              <button class="add" aria-label="Adicionar pastel">
+              <button class="add" aria-label="Adicionar Empada de palmito">
                 <i class="fi fi-rr-add"></i>
               </button>
             </div>
           </div>
           <div class="card-produto">
             <img
-              src="assets/images/esfiha.jpg"
-              alt="Esfiha"
+              src="../assets/images/croassant.jpg"
+              alt="Croassant amanteigado"
               width="358"
               height="396" />
-            <h3>Esfiha</h3>
+            <h3>Croassant amanteigado</h3>
             <div class="button-container">
-              <button class="remove" aria-label="Remover esfiha">
+              <button class="remove" aria-label="Remover Croassant amanteigado">
                 <i class="fi fi-rr-minus"></i>
               </button>
               <p>Comprar</p>
-              <button class="add" aria-label="Adicionar esfiha">
+              <button class="add" aria-label="Adicionar Croassant amanteigado">
                 <i class="fi fi-rr-add"></i>
               </button>
             </div>
