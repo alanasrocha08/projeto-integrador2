@@ -8,19 +8,16 @@ final class Usuario
     private string $nome;
     private string $email;
     private string $senha;
-    private string $datadecadastro;
 
     public function __construct(
         string $nome,
         string $email,
         string $senha,
-        string $datadecadastro,
         ?int $id = null
     ){
         $this->setNome($nome);
         $this->setEmail($email);
         $this->setSenha($senha);
-        $this->setdatadecadastro($datadecadastro);
         $this->setId($id);
     }
 
@@ -36,10 +33,7 @@ final class Usuario
     {
         return $this->senha;
     }
-    public function getdatadecadastro(): string 
-    {
-        return $this->datadecadastro;
-    }
+  
     public function getId(): int
     {
         return $this->id;
@@ -60,10 +54,6 @@ final class Usuario
         $this->senha = $senha;
     }
 
-    private function setdatadecadastro(string $datadecadastro): void 
-    {
-        $this->datadecadastro = $datadecadastro;
-    }
     private function setId(?int $id): void
     {
         $this->id = $id;
