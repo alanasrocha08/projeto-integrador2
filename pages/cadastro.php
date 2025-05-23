@@ -40,6 +40,7 @@ if (isset($_POST["cadastrar"])) {
 ?>
 <?php include "../includes/cabecalho.php" ?>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  <!-- Começo conteúdo principal (main) -->
     <main id="main-content">
       <div class="form-container">
@@ -107,6 +108,8 @@ if (isset($_POST["cadastrar"])) {
               </form>
             </div>
 =======
+=======
+>>>>>>> Stashed changes
 <!-- Começo conteúdo principal (main) -->
 <main id="main-content">
   <div class="form-container">
@@ -123,6 +126,9 @@ if (isset($_POST["cadastrar"])) {
               para quem vive <strong>sem glúten</strong>, mas com
               <strong>muito sabor</strong>.
             </p>
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
           </div>
           <form
