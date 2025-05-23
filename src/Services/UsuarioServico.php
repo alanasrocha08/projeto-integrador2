@@ -8,6 +8,7 @@ use ProjetoIntegrador\Database\ConexaoBD;
 use ProjetoIntegrador\Models\Usuario;
 use Throwable;
 
+
 final class UsuarioServico 
 {
     private PDO $conexao;
