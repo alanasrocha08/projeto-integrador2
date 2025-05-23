@@ -41,6 +41,7 @@ if (isset($_POST["cadastrar"])) {
 <?php include "../includes/cabecalho.php" ?>
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  <!-- Começo conteúdo principal (main) -->
     <main id="main-content">
       <div class="form-container">
@@ -110,6 +111,8 @@ if (isset($_POST["cadastrar"])) {
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 <!-- Começo conteúdo principal (main) -->
 <main id="main-content">
   <div class="form-container">
@@ -127,6 +130,9 @@ if (isset($_POST["cadastrar"])) {
               <strong>muito sabor</strong>.
             </p>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
