@@ -1,4 +1,4 @@
-<?php include "../includes/cabecalho.php"; ?>
+<?php require_once "../includes/cabecalho.php"; ?>
 
 <!-- Cards do Cardápio -->
 <div class="cardapio-container">

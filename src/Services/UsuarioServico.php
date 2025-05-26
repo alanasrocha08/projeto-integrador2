@@ -6,6 +6,7 @@ use ProjetoIntegrador\Database\ConexaoBD;
 use ProjetoIntegrador\Models\Usuario;
 use PDO;
 use Exception;
+use ProjetoIntegrador\Helpers\Utils;
 use Throwable;
 
 
@@ -89,6 +90,21 @@ final class UsuarioServico
             $consulta->execute();
         }catch (Throwable $erro) {
         throw new Exception("Erro ao excluir usuario: ".$erro->getMessage());
+        }
+    }
+
+    public function buscarPorEmail(string $email): ?array
+    {
+        $sql = "SELECT * FROM usuarios WHERE email = :email";
+
+        try {
+            $consulta = $this->conexao->prepare($sql);
+            $consulta->bindValue(":email", $email, PDO::PARAM_STR);
+            $consulta->execute();
+            return $consulta->fetch(PDO::FETCH_ASSOC) ?: null;
+        } catch (Throwable $e) {
+            Utils::registrarLog($e);
+            throw new Exception("Erro ao buscar usuário por e-mail.");
         }
     }
 }

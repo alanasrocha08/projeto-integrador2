@@ -4,7 +4,7 @@ namespace ProjetoIntegrador\Helpers;
 
 use Throwable;
 
-final class Utils 
+final class Utils
 {
 
     private function __construct() {}
@@ -29,7 +29,7 @@ final class Utils
     }
 
     // Verificando o id das páginas
-     public static function verificarId(mixed $valor): void
+    public static function verificarId(mixed $valor): void
     {
         if (!isset($valor) || !is_numeric($valor) || $valor <= 0) {
             // Se não for, redireciona para a página inicial

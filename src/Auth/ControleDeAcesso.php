@@ -1,26 +1,24 @@
 <?php
-namespace Microblog\Auth;
+namespace ProjetoIntegrador\Auth;
 
 final class ControleDeAcesso {
 
     private function __construct() {}
 
-    // inicia uma sessão caso não tenha nenhuma em andamento
-    private static function iniciarSessao():void
+    private static function iniciarSessao(): void
     {
-        if (!isset($_SESSION)) session_start();
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
     }
 
-    // "Bloqueia" ´páginas admin casoo usuário NÃO ESTEJA logado
     public static function exigirLogin(): void
     {
-        // Chama inicarSessao para iniciar (se necessário)
         self::iniciarSessao();
 
-        // Se NÃO EXISTIR uma variável de sessão chamada ID
-        if(!isset($_SESSION['id'])){
+        if (!isset($_SESSION['id'])) {
             session_destroy();
-            header("");
+            header("Location: ../login.php?acesso_proibido");
             exit;
         }
     }
@@ -29,7 +27,6 @@ final class ControleDeAcesso {
     {
         self::iniciarSessao();
 
-        // Definindo varáveis de sessaõ com os dados de quem logou
         $_SESSION['id'] = $id;
         $_SESSION['nome'] = $nome;
         $_SESSION['tipo'] = $tipo;
@@ -39,17 +36,17 @@ final class ControleDeAcesso {
     {
         self::iniciarSessao();
         session_destroy();
-        header("");
+        header("Location: ../login.php?logout");
         exit;
     }
 
     public static function exigirAdmin(): void
     {
         self::iniciarSessao();
-        if($_SESSION['tipo'] !== 'admin') {
-        header("");
-        exit;
 
+        if (!isset($_SESSION['tipo']) || $_SESSION['tipo'] !== 'admin') {
+            header("Location: ../login.php?acesso_proibido");
+            exit;
         }
     }
 }
