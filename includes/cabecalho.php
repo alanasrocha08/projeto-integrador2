@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Socorro</title>
+  <title><?= $titulo ?>></title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,41 +20,43 @@
 </head>
 
 <body>
-  <header>
-    <div class="limitador">
-      <div class="header">
-        <h1 class="titulo"><a href="../index.php"> Cooffee <img src="../assets/icons/logo_cooffee.svg" alt=""></a></h1>
-        <nav>
-          <button
-            type="button"
-            class="btn-menu"
-            aria-label="Abrir menu da navegação">
-            <i class="fi fi-rr-menu-burger" id="icon-menu"></i>
-          </button>
-          <ul class="links-menu">
+ 
+<header>
+  <div class="limitador">
+    <div class="header">
+      <h1 class="titulo"><a href="../index.php">Cooffee <img src="../assets/icons/logo_cooffee.svg" alt=""></a></h1>
+      <nav>
+        <button type="button" class="btn-menu" aria-label="Abrir menu da navegação">
+          <i class="fi fi-rr-menu-burger" id="icon-menu"></i>
+        </button>
+
+        <ul class="links-menu">
+          <li>
+            <a href="../index.php"><i class="fi fi-rr-home"></i>Home</a>
+          </li>
+          <li>
+            <a href="../pages/cardapio.php"><i class="fi fi-rr-restaurant"></i>Cardápio</a>
+          </li>
+
+          <?php if (isset($_SESSION['user'])): ?>
             <li>
-              <a href="../index.php"><i class="fi fi-rr-home"></i>Home</a>
+              <a href="../pages/perfil.php"><i class="fi fi-rr-user"></i>Perfil</a>
             </li>
-
             <li>
-              <a href="../pages/cardapio.php"><i class="fi fi-rr-restaurant"></i>Cardápio</a>
+              <a href="../pages/logout.php"><i class="fi fi-rr-exit"></i>Sair</a>
             </li>
-
-            <!-- if($_SESSION['user'] === "login") -->
-
+          <?php else: ?>
             <li>
-              <a href="../pages/login.php"><i class="fi fi-rr-user"></i>Login </a>
+              <a href="../pages/login.php"><i class="fi fi-rr-user"></i>Login</a>
             </li>
-
-            <!-- if($_SESSION['user'] === "login") -->
             <li>
-              <a href="login.php"><i class="fi fi-rr-user"></i>Perfil </a>
+              <a href="../pages/cadastro.php"><i class="fi fi-rr-user-add"></i>Cadastre-se</a>
             </li>
+          <?php endif; ?>
+        </ul>
 
-            <li><a href="../pages/cadastro.php"><i class="fi fi-rr-user"></i>Cadastre-se</a></li>
-          </ul>
-          <a href="../pages/carrinho.php" class="cart"><i class="fi fi-rr-shopping-cart"></i></a>
-        </nav>
-      </div>
+        <a href="../pages/carrinho.php" class="cart"><i class="fi fi-rr-shopping-cart"></i></a>
+      </nav>
     </div>
-  </header>
+  </div>
+</header>

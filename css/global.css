@@ -698,3 +698,37 @@ header a {
     opacity: 1;
   }
 }
+
+
+
+
+
+        body { font-family: Arial, sans-serif; background: #f4f4f4; }
+        .perfil-container {
+            max-width: 400px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .perfil-foto {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+        .perfil-nome {
+            font-size: 1.5em;
+            margin-bottom: 5px;
+        }
+        .perfil-email {
+            color: #888;
+            margin-bottom: 15px;
+        }
+        .perfil-bio {
+            font-size: 1em;
+            color: #333;
+        }
