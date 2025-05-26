@@ -39,6 +39,25 @@ CREATE TABLE usuario (
 ```
 
 ```sql
+-- Criando a tabela cadastro_real
+CREATE TABLE cadastro_real (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    usuario_id INT NOT NULL UNIQUE,
+    endereco VARCHAR(200) NOT NULL,
+    complemento VARCHAR(200) NOT NULL,
+    cpf VARCHAR(20) NOT NULL,
+    telefone VARCHAR(20) NOT NULL
+);
+```
+
+```sql
+-- chave estrangeira
+ALTER TABLE cadastro_real
+ADD CONSTRAINT fk_usuario
+FOREIGN KEY (usuario_id) REFERENCES usuario(id);
+```
+
+```sql
 -- Criando a tabela intermediária entre PEDIDOS e PRODUTOS
 CREATE TABLE pedido_produto (
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,

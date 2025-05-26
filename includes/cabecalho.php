@@ -1,65 +1,59 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
-<?php
-$caminho = basename($_SERVER["REQUEST_URI"]);
- 
-switch ($caminho) {
-  case "index.php":
-    $titulo = "Página Inicial";
-    break;
- 
-  case "cadastro.php":
-    $titulo = "Cadastros";
-    break;
- 
-  case "cardapio.php":
-    $titulo = "Cardápio";
-    break;
- 
-  case "contato.php":
-    $titulo = "Contato";
-    break;
 
-    case "servicos.php":
-        $titulo = "Servicos";
-        break;
-  default:
-    $titulo = "";
-    break;
-}
-?>
- 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><?= $titulo ?></title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Socorro</title>
 
-    <link rel="stylesheet" href="../global.css">
- 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5..3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet" />
- 
-    <link rel="shortcut icon" href="assets/jm_black.svg" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="shortcut icon" href="assets/jm_black.svg" type="image/x-icon" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <link
+    rel="stylesheet"
+    href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css" />
+  <link rel="stylesheet" href="../css/global.css">
 </head>
- 
+
 <body>
-    <header class="topo">
-        <div class="limitador">
-            <h1 class="titulo">
-                <a href="../index.php">CAFETERIA<span></span></a>
-            </h1>
-            <nav class="menu">
-                <ul class="links-menu">
-                    <li><a href="../index.php">Home</a></li>
-                    <li><a href="servicos.php">Serviços</a></li>
-                    <li><a href="contato.php">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <header>
+    <div class="limitador">
+      <div class="header">
+        <h1 class="titulo"><a href="../index.php"> Cooffee <img src="../assets/icons/logo_cooffee.svg" alt=""></a></h1>
+        <nav>
+          <button
+            type="button"
+            class="btn-menu"
+            aria-label="Abrir menu da navegação">
+            <i class="fi fi-rr-menu-burger" id="icon-menu"></i>
+          </button>
+          <ul class="links-menu">
+            <li>
+              <a href="../index.php"><i class="fi fi-rr-home"></i>Home</a>
+            </li>
+
+            <li>
+              <a href="../pages/cardapio.php"><i class="fi fi-rr-restaurant"></i>Cardápio</a>
+            </li>
+
+            <!-- if($_SESSION['user'] === "login") -->
+
+            <li>
+              <a href="../pages/login.php"><i class="fi fi-rr-user"></i>Login </a>
+            </li>
+
+            <!-- if($_SESSION['user'] === "login") -->
+            <li>
+              <a href="login.php"><i class="fi fi-rr-user"></i>Perfil </a>
+            </li>
+
+            <li><a href="../pages/cadastro.php"><i class="fi fi-rr-user"></i>Cadastre-se</a></li>
+          </ul>
+          <a href="../pages/carrinho.php" class="cart"><i class="fi fi-rr-shopping-cart"></i></a>
+        </nav>
+      </div>
+    </div>
+  </header>
