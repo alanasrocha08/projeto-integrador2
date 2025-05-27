@@ -25,21 +25,36 @@ if (isset($_POST["cadastrar"])) {
   // Capturar/sanitizar os dados
   $senha = filter_input(
     INPUT_POST,
+<<<<<<< Updated upstream
     'password',
     FILTER_SANITIZE_SPECIAL_CHARS
   );
 
+=======
+    'senha',
+    FILTER_SANITIZE_SPECIAL_CHARS
+  );
+  
+>>>>>>> Stashed changes
   $usuario = new Usuario($nome, $email, $senha);
 
   $usuarioServico->inserir($usuario);
 
+<<<<<<< Updated upstream
   header("location:../index.php");
+=======
+  header("location:index.php");
+>>>>>>> Stashed changes
   exit;
 }
 
 ?>
+<<<<<<< Updated upstream
 <?php require_once "../includes/cabecalho.php" ?>
 
+=======
+<?php include "../includes/cabecalho.php" ?>
+>>>>>>> Stashed changes
 <!-- Começo conteúdo principal (main) -->
 <main id="main-content">
   <div class="form-container">
@@ -59,7 +74,11 @@ if (isset($_POST["cadastrar"])) {
           </div>
           <form
             id="my-form"
+<<<<<<< Updated upstream
             action=""
+=======
+            action="https://formspree.io/f/mqakebnj"
+>>>>>>> Stashed changes
             method="post">
             <div class="form">
               <div class="nome">
@@ -84,7 +103,11 @@ if (isset($_POST["cadastrar"])) {
                 <input
                   required
                   type="password"
+<<<<<<< Updated upstream
                   name="password"
+=======
+                  name="senha"
+>>>>>>> Stashed changes
                   id="password"
                   placeholder="Digite sua senha"
                   aria-label="Digite a sua senha" />
@@ -93,8 +116,13 @@ if (isset($_POST["cadastrar"])) {
                 id="my-form-button"
                 class="btn-submit"
                 type="submit"
+<<<<<<< Updated upstream
                 name="cadastrar"
                 aria-label="Botão de concluir o cadastro">
+=======
+                aria-label="Botão de concluir o cadastro"
+                name="cadastrar">
+>>>>>>> Stashed changes
                 Cadastrar <i class="fi fi-rr-paper-plane"></i>
               </button>
               <span id="my-form-status"></span>

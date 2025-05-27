@@ -48,7 +48,7 @@ if (isset($_POST['entrar'])) {
       // Estamos tudo ok (usuario e senha), passamos
       // para o metodo login os dados da pessoa que esta logado
       ControleDeAcesso::login($usuario['id'], $usuario['nome'], $usuario['tipo']);
-      header("location:login.php?dados_incorretos");
+      header("location:cardapio.php");
       exit;
     } else {
       // Caso contráio (senha errada), mantenha a pessoa em login
