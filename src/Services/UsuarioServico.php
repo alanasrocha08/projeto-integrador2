@@ -6,10 +6,9 @@ use ProjetoIntegrador\Database\ConexaoBD;
 use ProjetoIntegrador\Models\Usuario;
 use PDO;
 use Exception;
-<<<<<<< Updated upstream
+
 use ProjetoIntegrador\Helpers\Utils;
-=======
->>>>>>> Stashed changes
+
 use Throwable;
 
 
