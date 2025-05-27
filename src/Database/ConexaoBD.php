@@ -25,10 +25,11 @@ abstract class ConexaoBD
                 
                 self::$conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             } catch (Throwable $erro) {
+                error_log("ERRO DB: " . $erro->getMessage());
                 // [A FAZER] Registra a exceção em um arquivo de log/texto interno
 
                 // Lançar uma mensagem de erro genérica sem detalhes do banco/sistema
-                throw new Exception("Erro ao conectar com o banco de dados!");
+                throw new Exception("Erro detalhado: " . $erro->getMessage()); //"Erro ao conectar com o banco de dados!");
             }
         }
 
