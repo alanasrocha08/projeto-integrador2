@@ -50,7 +50,6 @@ switch ($caminho) {
     rel="stylesheet"
     href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css" />
   <link rel="stylesheet" href="../css/global.css">
-<script async src="../js/carrinho.js"></script>
 </head>
 
 <body>
