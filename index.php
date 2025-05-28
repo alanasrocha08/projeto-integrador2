@@ -54,34 +54,45 @@ switch ($caminho) {
 
 <body>
   <header>
-    <div class="limitador">
-      <div class="header">
-        <h1 class="titulo"><a href="index.php"> Cooffee <img class="logo" src="assets/icons/logo_cooffee.svg" alt=""></a></h1>
+  <div class="limitador">
+    <div class="header">
+      <h1 class="titulo"><a href="./index.php">Cooffee <img src="./assets/icons/logo_cooffee.svg" alt=""></a></h1>
+      <nav>
+        <button type="button" class="btn-menu" aria-label="Abrir menu da navegação">
+          <i class="fi fi-rr-menu-burger" id="icon-menu"></i>
+        </button>
 
-        <nav>
-          <button
-            type="button"
-            class="btn-menu"
-            aria-label="Abrir menu da navegação">
-            <i class="fi fi-rr-menu-burger" id="icon-menu"></i>
-          </button>
-          <ul class="links-menu">
+        <ul class="links-menu">
+          <li>
+            <a href="index.php"><i class="fi fi-rr-home"></i>Home</a>
+          </li>
+          <li>
+            <a href="./pages/cardapio.php"><i class="fi fi-rr-restaurant"></i>Cardápio</a>
+          </li>
+
+          <?php if (isset($_SESSION['id'])): ?>
             <li>
-              <a href="./index.php"><i class="fi fi-rr-home"></i>Home</a>
+              <a href="./pages/perfil.php"><i class="fi fi-rr-user"></i>Perfil</a>
             </li>
             <li>
-              <a href="./pages/cardapio.php"><i class="fi fi-rr-restaurant"></i>Cardápio</a>
+              <a href="./pages/logout.php"><i class="fi fi-rr-exit"></i>Sair</a>
             </li>
-            <a href="./pages/login.php"><i class="fi fi-rr-user"></i>Login </a>
-            </li>
-            <li><a href="./pages/cadastro.php"><i class="fi fi-rr-user"></i>Cadastre-se</a></li>
+          <?php else: ?>
             <li>
-          </ul>
-          <a href="./pages/carrinho.php" class="cart"><i class="fi fi-rr-shopping-cart"></i></a>
-        </nav>
-      </div>
+              <a href="./pages/login.php"><i class="fi fi-rr-user"></i>Login</a>
+            </li>
+            
+            <li>
+              <a href="./pages/cadastro.php"><i class="fi fi-rr-user-add"></i>Cadastre-se</a>
+            </li>
+          <?php endif; ?>
+        </ul>
+
+        <a href="../pages/carrinho.php" class="cart"><i class="fi fi-rr-shopping-cart"></i></a>
+      </nav>
     </div>
-  </header>
+  </div>
+</header>
 
   <main id="main-content">
     <div class="hero">

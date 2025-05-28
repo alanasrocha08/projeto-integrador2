@@ -23,11 +23,8 @@ if (isset($_POST["cadastrar"])) {
   );
 
   // Capturar/sanitizar os dados
-  $senha = filter_input(
-    INPUT_POST,
-    'senha',
-    FILTER_SANITIZE_SPECIAL_CHARS
-  );
+  $senhaBruta = $_POST['senha'];
+  $senha = password_hash($senhaBruta, PASSWORD_DEFAULT);
 
   $usuario = new Usuario($nome, $email, $senha);
 

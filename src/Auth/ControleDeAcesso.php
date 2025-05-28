@@ -23,13 +23,13 @@ final class ControleDeAcesso {
         }
     }
 
-    public static function login(int $id, string $nome, string $tipo): void
+    public static function login(int $id, string $nome): void
     {
         self::iniciarSessao();
 
         $_SESSION['id'] = $id;
         $_SESSION['nome'] = $nome;
-        $_SESSION['tipo'] = $tipo;
+       
     }
 
     public static function logout(): void
@@ -46,6 +46,18 @@ final class ControleDeAcesso {
 
         if (!isset($_SESSION['tipo']) || $_SESSION['tipo'] !== 'admin') {
             header("Location: ../login.php?acesso_proibido");
+            exit;
+        }
+    }
+
+    public static function verificaAcesso()
+    {
+        if (session_status() !== PHP_SESSION_ACTIVE) {
+            session_start();
+        }
+
+        if (!isset($_SESSION['id'])) {
+            header("location: login.php?acesso_proibido");
             exit;
         }
     }

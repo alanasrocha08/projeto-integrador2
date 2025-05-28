@@ -97,7 +97,7 @@ final class UsuarioServico
 
     public function buscarPorEmail(string $email): ?array
     {
-        $sql = "SELECT * FROM usuarios WHERE email = :email";
+        $sql = "SELECT * FROM usuario WHERE email = :email";
 
         try {
             $consulta = $this->conexao->prepare($sql);

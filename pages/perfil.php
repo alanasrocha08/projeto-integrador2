@@ -1,4 +1,9 @@
-<?php include "../includes/cabecalho.php" ?>
+<?php
+
+include "../includes/cabecalho.php";
+require_once "../vendor/autoload.php";
+
+?>
 
 <style>
   /* Espaçamento geral do container do formulário */
@@ -136,11 +141,7 @@
           <button class="btn-excluir" type="submit" name="excluir" aria-label="Botão de excluir conta" onclick="return confirm('Tem certeza que deseja excluir sua conta? Esta ação não poderá ser desfeita.')">
           <i class="fi fi-rr-trash"></i> Excluir Conta
           </button>
-
-
-
         </form>
-
       </article>
     </div>
   </div>
