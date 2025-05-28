@@ -1,4 +1,45 @@
-<?php require_once "../includes/cabecalho.php"; ?>
+<?php
+session_start();
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['adicionar_carrinho'])) {
+  $produto_id = $_POST['produto_id'];
+  $produto_nome = $_POST['produto_nome'];
+}
+
+  // Inicializa o carrinho se não existir
+  if (!isset($_SESSION['carrinho'])) {
+    $_SESSION['carrinho'] = [];
+  }
+
+  // Se o produto já existe, incrementa a quantidade
+  if (isset($_SESSION['carrinho'][$produto_id])) {
+    $_SESSION['carrinho'][$produto_id]['quantidade'] += 1;
+  } else {
+    // Adiciona novo produto
+    $_SESSION['carrinho'][$produto_id] = [
+      'nome' => $produto_nome,
+      'quantidade' => 1
+    ];
+  }
+
+  // Remover produto (diminuir quantidade ou excluir)
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['remover_carrinho'])) {
+    $produto_id = $_POST['produto_id'];
+
+    if (isset($_SESSION['carrinho'][$produto_id])) {
+        $_SESSION['carrinho'][$produto_id]['quantidade'] -= 1;
+        if ($_SESSION['carrinho'][$produto_id]['quantidade'] <= 0) {
+            unset($_SESSION['carrinho'][$produto_id]);
+        }
+    }
+  // Redireciona para evitar reenvio do formulário
+  header("Location: cardapio.php");
+  exit;
+}
+
+
+require_once "../includes/cabecalho.php";
+?>
 
 <!-- Cards do Cardápio -->
 <div class="cardapio-container">
@@ -39,86 +80,94 @@
   <div class="limitador">
     <section class="carrosel-de-compras">
       <h2>Bebidas</h2>
-      <div id="bebidas quentes"> 
-      <h3>Bebidas quentes</h3>
-      <div class="container-card-slider">
-        <button
-          type="button"
-          class="slider-btn prev"
-          aria-label="Voltar no carrossel">
-          <i class="fi fi-rr-angle-left"></i>
-        </button>
-        <div class="container-card">
-          <div class="card-produto">
-            <img
-              src="../assets/images/cafe-espresso.jpg"
-              alt="Café expresso"
-              width="358"
-              height="396" />
-            <h3>Café expresso</h3>
-            <div class="button-container">
-              <button class="remove" aria-label="Remover café expresso">
-                <i class="fi fi-rr-minus"></i>
+      <div id="bebidas quentes">
+        <h3>Bebidas quentes</h3>
+        <div class="container-card-slider">
+          <button
+            type="button"
+            class="slider-btn prev"
+            aria-label="Voltar no carrossel">
+            <i class="fi fi-rr-angle-left"></i>
+          </button>
+          <div class="container-card">
+            <div class="card-produto">
+              <img
+                src="../assets/images/cafe-espresso.jpg"
+                alt="Café expresso"
+                width="358"
+                height="396" />
+              <h3>Café expresso</h3>
+              <div class="button-container">
+                <form action="cardapio.php" method="post" style="display:inline;">
+      <input type="hidden" name="produto_id" value="1">
+      <input type="hidden" name="produto_nome" value="Café expresso">
+      <button type="submit" name="remover_carrinho" class="remove" aria-label="Remover café expresso">
+        <i class="fi fi-rr-minus"></i>
+      </button>
+    </form>
+    <p>Comprar</p>
+    <form action="cardapio.php" method="post" style="display:inline;">
+      <input type="hidden" name="produto_id" value="1">
+      <input type="hidden" name="produto_nome" value="Café expresso">
+      <button type="submit" name="adicionar_carrinho" class="add" aria-label="Adicionar café expresso">
+        <i class="fi fi-rr-add"></i>
+      </button>
+    </form>
+  </div>
+</div>
+            <!-- Adicione outros produtos relevantes aqui -->
+            <div class="container-card-slider">
+              <button
+                type="button"
+                class="slider-btn prev"
+                aria-label="Voltar no carrossel">
+                <i class="fi fi-rr-angle-left"></i>
               </button>
-              <p>Comprar</p>
-              <button class="add" aria-label="Adicionar café expresso">
-                <i class="fi fi-rr-add"></i>
-              </button>
-            </div>
-          </div>
-          <!-- Adicione outros produtos relevantes aqui -->
-           <div class="container-card-slider">
-        <button
-          type="button"
-          class="slider-btn prev"
-          aria-label="Voltar no carrossel">
-          <i class="fi fi-rr-angle-left"></i>
-        </button>
-        <div class="container-card">
-          <div class="card-produto">
-            <img
-              src="../assets/images/chocolate-quente.jpg"
-              alt="Chocolate quente"
-              width="358"
-              height="396" />
-            <h3>Chocolate quente</h3>
-            <div class="button-container">
-              <button class="remove" aria-label="Remover chocolate quente">
-                <i class="fi fi-rr-minus"></i>
-              </button>
-              <p>Comprar</p>
-              <button class="add" aria-label="Adicionar chocolate quente">
-                <i class="fi fi-rr-add"></i>
-              </button>
-            </div>
-          </div>
-          <div class="container-card-slider">
-        <button
-          type="button"
-          class="slider-btn prev"
-          aria-label="Voltar no carrossel">
-          <i class="fi fi-rr-angle-left"></i>
-        </button>
-        <div class="container-card">
-          <div class="card-produto">
-            <img
-              src="../assets/images/macchiato-caramelo.jpg"
-              alt="Macciato Caramelo"
-              width="358"
-              height="396" />
-            <h3>Macciato Caramelo</h3>
-            <div class="button-container">
-              <button class="remove" aria-label="Remover macciato-caramelo">
-                <i class="fi fi-rr-minus"></i>
-              </button>
-              <p>Comprar</p>
-              <button class="add" aria-label="Adicionar macciato-caramelo">
-                <i class="fi fi-rr-add"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+              <div class="container-card">
+                <div class="card-produto">
+                  <img
+                    src="../assets/images/chocolate-quente.jpg"
+                    alt="Chocolate quente"
+                    width="358"
+                    height="396" />
+                  <h3>Chocolate quente</h3>
+                  <div class="button-container">
+                    <form action="cardapio.php" method="post">
+                      <input type="hidden" name="produto_nome" value="Chocolate quente">
+                      <input type="hidden" name="produto_id" value="2">
+                      <button type="submit" name="adicionar_carrinho" class="add" aria-label="Adicionar café expresso">
+                        <i class="fi fi-rr-add"></i>
+                      </button>
+                    </form>
+                  </div>
+                </div>
+                <div class="container-card-slider">
+                  <button
+                    type="button"
+                    class="slider-btn prev"
+                    aria-label="Voltar no carrossel">
+                    <i class="fi fi-rr-angle-left"></i>
+                  </button>
+                  <div class="container-card">
+                    <div class="card-produto">
+                      <img
+                        src="../assets/images/macchiato-caramelo.jpg"
+                        alt="Macciato Caramelo"
+                        width="358"
+                        height="396" />
+                      <h3>Macciato Caramelo</h3>
+                      <div class="button-container">
+                        <button class="remove" aria-label="Remover macciato-caramelo">
+                          <i class="fi fi-rr-minus"></i>
+                        </button>
+                        <p>Comprar</p>
+                        <button class="add" aria-label="Adicionar macciato-caramelo">
+                          <i class="fi fi-rr-add"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
     </section>
   </div>
 </div>
@@ -155,58 +204,58 @@
             </div>
           </div>
           <!-- Adicione outros produtos relevantes aqui -->
-      <div class="container-card-slider">
-        <button
-          type="button"
-          class="slider-btn prev"
-          aria-label="Voltar no carrossel">
-          <i class="fi fi-rr-angle-left"></i>
-        </button>
-        <div class="container-card">
-          <div class="card-produto">
-            <img
-              src="../assets/images/cafe-gelado.jpg"
-              alt="Café gelado"
-              width="358"
-              height="396" />
-            <h3>Café gelado</h3>
-            <div class="button-container">
-              <button class="remove" aria-label="Remover Café gelado">
-                <i class="fi fi-rr-minus"></i>
-              </button>
-              <p>Comprar</p>
-              <button class="add" aria-label="Adicionar Café gelado">
-                <i class="fi fi-rr-add"></i>
-              </button>
-            </div>
-          </div>
-      <div class="container-card-slider">
-        <button
-          type="button"
-          class="slider-btn prev"
-          aria-label="Voltar no carrossel">
-          <i class="fi fi-rr-angle-left"></i>
-        </button>
-        <div class="container-card">
-          <div class="card-produto">
-            <img
-              src="../assets/images/milkshake-morango.jpg"
-              alt="Suco de laranja"
-              width="358"
-              height="396" />
-            <h3>Milkshake de morango</h3>
-            <div class="button-container">
-              <button class="remove" aria-label="Remover milkshake de morango">
-                <i class="fi fi-rr-minus"></i>
-              </button>
-              <p>Comprar</p>
-              <button class="add" aria-label="Adicionar milkshake de morango">
-                <i class="fi fi-rr-add"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+          <div class="container-card-slider">
+            <button
+              type="button"
+              class="slider-btn prev"
+              aria-label="Voltar no carrossel">
+              <i class="fi fi-rr-angle-left"></i>
+            </button>
+            <div class="container-card">
+              <div class="card-produto">
+                <img
+                  src="../assets/images/cafe-gelado.jpg"
+                  alt="Café gelado"
+                  width="358"
+                  height="396" />
+                <h3>Café gelado</h3>
+                <div class="button-container">
+                  <button class="remove" aria-label="Remover Café gelado">
+                    <i class="fi fi-rr-minus"></i>
+                  </button>
+                  <p>Comprar</p>
+                  <button class="add" aria-label="Adicionar Café gelado">
+                    <i class="fi fi-rr-add"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="container-card-slider">
+                <button
+                  type="button"
+                  class="slider-btn prev"
+                  aria-label="Voltar no carrossel">
+                  <i class="fi fi-rr-angle-left"></i>
+                </button>
+                <div class="container-card">
+                  <div class="card-produto">
+                    <img
+                      src="../assets/images/milkshake-morango.jpg"
+                      alt="Suco de laranja"
+                      width="358"
+                      height="396" />
+                    <h3>Milkshake de morango</h3>
+                    <div class="button-container">
+                      <button class="remove" aria-label="Remover milkshake de morango">
+                        <i class="fi fi-rr-minus"></i>
+                      </button>
+                      <p>Comprar</p>
+                      <button class="add" aria-label="Adicionar milkshake de morango">
+                        <i class="fi fi-rr-add"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
     </section>
   </div>
 </div>
@@ -259,7 +308,7 @@
             </div>
           </div>
           <!-- Adicione outros produtos relevantes aqui -->
-<div class="card-produto">
+          <div class="card-produto">
             <img
               src="../assets/images/carolina.jpg"
               alt="Carolina"
@@ -275,7 +324,7 @@
                 <i class="fi fi-rr-add"></i>
               </button>
             </div>
-          </div>  
+          </div>
 
         </div>
       </div>
@@ -347,9 +396,11 @@
               </button>
             </div>
           </div>
+
           <!-- Adicione outros salgados conforme necessário -->
         </div>
       </div>
+
     </section>
   </div>
 </div>

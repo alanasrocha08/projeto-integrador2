@@ -1,3 +1,36 @@
+<?php
+$caminho = basename($_SERVER["REQUEST_URI"]);
+
+switch ($caminho) {
+  case "index.php":
+    $titulo = "Página Inicial";
+    break;
+
+  case "cadastro.php":
+    $titulo = "Cadastros";
+    break;
+
+  case "cardapio.php":
+    $titulo = "Cardápio";
+    break;
+
+  case "login.php":
+    $titulo = "Login";
+    break;
+
+  case "perfil.php":
+    $titulo = "perfil";
+    break;
+
+  case "carrinho.php":
+    $titulo = "carrinho";
+    break;
+
+  default:
+    $titulo = "";
+    break;
+}
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -51,11 +84,13 @@
             </li>
             
             <li>
+              <a href="../pages/perfil.php"><i class="fi fi-rr-user"></i>Perfil</a>
+            </li>
+            <li>
               <a href="../pages/cadastro.php"><i class="fi fi-rr-user-add"></i>Cadastre-se</a>
             </li>
           <?php endif; ?>
         </ul>
-
         <a href="../pages/carrinho.php" class="cart"><i class="fi fi-rr-shopping-cart"></i></a>
       </nav>
     </div>
