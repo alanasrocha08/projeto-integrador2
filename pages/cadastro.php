@@ -34,9 +34,9 @@ if (isset($_POST["cadastrar"])) {
   $usuarioServico->inserir($usuario);
 
 
-  header("location:../index.php");
-
   header("location:index.php");
+
+  //header("location:index.php");
 
   exit;
 }
@@ -92,8 +92,6 @@ if (isset($_POST["cadastrar"])) {
                 <input
                   required
                   type="password"
-
-                  name="password"
 
                   name="senha"
 
