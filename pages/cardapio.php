@@ -347,10 +347,15 @@
               </button>
             </div>
           </div>
+
           <!-- Adicione outros salgados conforme necessário -->
         </div>
       </div>
+      <h2>Carrinho</h2>
     </section>
+
+      
+    
   </div>
 </div>
 

@@ -1,3 +1,36 @@
+<?php
+$caminho = basename($_SERVER["REQUEST_URI"]);
+
+switch ($caminho) {
+  case "index.php":
+    $titulo = "Página Inicial";
+    break;
+
+  case "cadastro.php":
+    $titulo = "Cadastros";
+    break;
+
+  case "cardapio.php":
+    $titulo = "Cardápio";
+    break;
+
+  case "login.php":
+    $titulo = "Login";
+    break;
+
+  case "perfil.php":
+    $titulo = "perfil";
+    break;
+
+  case "carrinho.php":
+    $titulo = "carrinho";
+    break;
+
+  default:
+    $titulo = "";
+    break;
+}
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -17,6 +50,7 @@
     rel="stylesheet"
     href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css" />
   <link rel="stylesheet" href="../css/global.css">
+<script async src="../js/carrinho.js"></script>
 </head>
 
 <body>
@@ -50,7 +84,7 @@
               <a href="../pages/login.php"><i class="fi fi-rr-user"></i>Login</a>
             </li>
             <li>
-              <a href="../pages/perfil.php"><i class="fi fi-rr-user"></i>Pefil</a>
+              <a href="../pages/perfil.php"><i class="fi fi-rr-user"></i>Perfil</a>
             </li>
             <li>
               <a href="../pages/cadastro.php"><i class="fi fi-rr-user-add"></i>Cadastre-se</a>
