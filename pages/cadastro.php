@@ -34,7 +34,7 @@ if (isset($_POST["cadastrar"])) {
   $usuarioServico->inserir($usuario);
 
 
-  header("location:index.php");
+  header("location:/projeto-integrador2/index.php");
 
   //header("location:index.php");
 
