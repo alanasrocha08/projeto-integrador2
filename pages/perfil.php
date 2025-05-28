@@ -71,6 +71,29 @@
     font-weight: 600;
     text-align: center;
   }
+
+  .btn-excluir {
+  width: 100%;
+  padding: 12px 0;
+  margin-top: 12px;
+  background:rgb(182, 11, 5); /* vermelho */
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: 0.2s;
+}
+
+.btn-excluir:hover {
+  background:rgb(126, 0, 0);
+}
+
 </style>
 
 <div class="form-container">
@@ -109,6 +132,13 @@
           <button class="btn-submit" name="atualizar" aria-label="Botão de atualizar dados">
             <i class="fi fi-rr-refresh"></i> Atualizar
           </button>
+
+          <button class="btn-excluir" type="submit" name="excluir" aria-label="Botão de excluir conta" onclick="return confirm('Tem certeza que deseja excluir sua conta? Esta ação não poderá ser desfeita.')">
+          <i class="fi fi-rr-trash"></i> Excluir Conta
+          </button>
+
+
+
         </form>
 
       </article>

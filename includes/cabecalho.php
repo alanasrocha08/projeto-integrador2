@@ -70,25 +70,14 @@ switch ($caminho) {
           <li>
             <a href="../pages/cardapio.php"><i class="fi fi-rr-restaurant"></i>Cardápio</a>
           </li>
-
-          <?php if (isset($_SESSION['user'])): ?>
-            <li>
-              <a href="../pages/perfil.php"><i class="fi fi-rr-user"></i>Perfil</a>
-            </li>
-            <li>
-              <a href="../pages/logout.php"><i class="fi fi-rr-exit"></i>Sair</a>
-            </li>
-          <?php else: ?>
-            <li>
               <a href="../pages/login.php"><i class="fi fi-rr-user"></i>Login</a>
             </li>
             <li>
-              <a href="../pages/perfil.php"><i class="fi fi-rr-user"></i>Perfil</a>
+              <a href="../pages/perfil.php"><i class="fi fi-rr-user"></i>Pefil</a>
             </li>
             <li>
               <a href="../pages/cadastro.php"><i class="fi fi-rr-user-add"></i>Cadastre-se</a>
             </li>
-          <?php endif; ?>
         </ul>
 
         <a href="../pages/carrinho.php" class="cart"><i class="fi fi-rr-shopping-cart"></i></a>
