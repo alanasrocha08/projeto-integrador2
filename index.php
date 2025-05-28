@@ -438,17 +438,18 @@ switch ($caminho) {
     </div>
   </footer>
 
+  <!-- MODAL-carrinho de compras -->
 
+  <button class="open-modal" data-modal="modal-1">Open Modal</button>
 
-  <div class="container-modal">
-    <div class="modal">
-      <h4>Produto: </h4>
-      <p>Preço unitário: R$</p>
-      <p>Qtd.: </p>
-      <p>Preço Total: R$</p>
-    </div>
-  </div>
+  <dialog id="modal-1">
+    <form>
+      <div class="modal">
 
+      </div>
+    </form>
+  </dialog>
+  <script src="js/modal.js"></script>
   <script type="module" src="js/main.js"></script>
   <script src="js/carrossel.js"></script>
 </body>

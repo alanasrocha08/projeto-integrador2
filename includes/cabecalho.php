@@ -79,7 +79,6 @@ switch ($caminho) {
               <a href="../pages/cadastro.php"><i class="fi fi-rr-user-add"></i>Cadastre-se</a>
             </li>
         </ul>
-
         <a href="../pages/carrinho.php" class="cart"><i class="fi fi-rr-shopping-cart"></i></a>
       </nav>
     </div>
