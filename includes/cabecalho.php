@@ -73,7 +73,7 @@ switch ($caminho) {
               <a href="../pages/login.php"><i class="fi fi-rr-user"></i>Login</a>
             </li>
             <li>
-              <a href="../pages/perfil.php"><i class="fi fi-rr-user"></i>Pefil</a>
+              <a href="../pages/perfil.php"><i class="fi fi-rr-user"></i>Perfil</a>
             </li>
             <li>
               <a href="../pages/cadastro.php"><i class="fi fi-rr-user-add"></i>Cadastre-se</a>
