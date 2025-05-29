@@ -1,6 +1,9 @@
 <?php
-$caminho = basename($_SERVER["REQUEST_URI"]);
 
+use ProjetoIntegrador\Auth\ControleDeAcesso;
+require_once "vendor/autoload.php";
+
+$caminho = basename($_SERVER["REQUEST_URI"]);
 switch ($caminho) {
   case "index.php":
     $titulo = "Página Inicial";
@@ -19,13 +22,20 @@ switch ($caminho) {
     break;
 
   case "perfil.php":
-    $titulo = "perfil";
+    $titulo = "Perfil";
+    break;
+
+  case "carrinho.php":
+    $titulo = "Carrinho";
     break;
 
   default:
     $titulo = "";
     break;
 }
+//ControleDeAcesso::verificaAcesso();
+
+if(isset($_GET['sair'])) ControleDeAcesso::logout();
 ?>
 
 <!DOCTYPE html>
@@ -75,7 +85,7 @@ switch ($caminho) {
               <a href="./pages/perfil.php"><i class="fi fi-rr-user"></i>Perfil</a>
             </li>
             <li>
-              <a href="./pages/logout.php"><i class="fi fi-rr-exit"></i>Sair</a>
+              <a href="?sair"><i class="fi fi-rr-exit"></i>Sair</a>
             </li>
           <?php else: ?>
             <li>

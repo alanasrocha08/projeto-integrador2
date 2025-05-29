@@ -1,4 +1,9 @@
 <?php
+
+require_once "../vendor/autoload.php";
+
+use ProjetoIntegrador\Auth\ControleDeAcesso;
+
 $caminho = basename($_SERVER["REQUEST_URI"]);
 
 switch ($caminho) {
@@ -19,18 +24,23 @@ switch ($caminho) {
     break;
 
   case "perfil.php":
-    $titulo = "perfil";
+    $titulo = "Perfil";
     break;
 
   case "carrinho.php":
-    $titulo = "carrinho";
+    $titulo = "Carrinho";
     break;
 
   default:
     $titulo = "";
     break;
 }
+
+//ControleDeAcesso::exigirLogin();
+
+if(isset($_GET['sair'])) ControleDeAcesso::logout();
 ?>
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -76,16 +86,13 @@ switch ($caminho) {
               <a href="../pages/perfil.php"><i class="fi fi-rr-user"></i>Perfil</a>
             </li>
             <li>
-              <a href="../pages/logout.php"><i class="fi fi-rr-exit"></i>Sair</a>
+              <a href="?sair"><i class="fi fi-rr-exit"></i>Sair</a>
             </li>
           <?php else: ?>
             <li>
               <a href="../pages/login.php"><i class="fi fi-rr-user"></i>Login</a>
             </li>
-            
-            <li>
-              <a href="../pages/perfil.php"><i class="fi fi-rr-user"></i>Perfil</a>
-            </li>
+          
             <li>
               <a href="../pages/cadastro.php"><i class="fi fi-rr-user-add"></i>Cadastre-se</a>
             </li>

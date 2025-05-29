@@ -36,7 +36,7 @@ final class ControleDeAcesso {
     {
         self::iniciarSessao();
         session_destroy();
-        header("Location: ../login.php?logout");
+        header("location:./pages/login.php");
         exit;
     }
 
@@ -45,7 +45,7 @@ final class ControleDeAcesso {
         self::iniciarSessao();
 
         if (!isset($_SESSION['tipo']) || $_SESSION['tipo'] !== 'admin') {
-            header("Location: ../login.php?acesso_proibido");
+            header("location:../login.php?acesso_proibido");
             exit;
         }
     }
