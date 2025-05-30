@@ -7,6 +7,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['excluir_produto'])) {
     unset($_SESSION['carrinho'][$produto_id]);
     header("Location: carrinho.php");
     exit;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
 }
 
 require_once "../includes/cabecalho.php";

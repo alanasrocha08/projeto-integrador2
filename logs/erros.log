@@ -13,3 +13,8 @@ Arquivo: C:\xampp\htdocs\projeto-integrador2\src\Database\ConexaoBD.php
 Linha: 32
 Mensagem: Erro detalhado: SQLSTATE[HY000] [2002] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
 
+[2025-05-30 09:56:15]
+Arquivo: C:\xampp\htdocs\projeto-integrador2\src\Database\ConexaoBD.php
+Linha: 32
+Mensagem: Erro detalhado: SQLSTATE[HY000] [1049] Unknown database 'cafeteria-teste-pi'
+

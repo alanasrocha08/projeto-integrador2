@@ -98,7 +98,7 @@ if(isset($_GET['sair'])) ControleDeAcesso::logout();
           <?php endif; ?>
         </ul>
 
-        <a href="../pages/carrinho.php" class="cart"><i class="fi fi-rr-shopping-cart"></i></a>
+        <a href="./pages/carrinho.php" class="cart"><i class="fi fi-rr-shopping-cart"></i></a>
       </nav>
     </div>
   </div>
